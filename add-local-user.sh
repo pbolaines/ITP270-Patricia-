@@ -9,11 +9,18 @@ read varname
 echo This is your name $varname
 echo Enter a Password: 
 read -s $varpass
-echo Your account is being created, please wait system processing...
-echo This is your password - $x $varpass
-echo The information you entered is: Username $varuser, Name $varname, Password $varpass
-echo Unexpected error, please try again later!!!
-echo exit 1
+echo Please wait system processing...
+echo This is your password - $x $varpass 
+echo The information you entered is: Username $varuser, Name $varname, Password $varpass. Is this correct?[Y/N]
+read -a  varinfor
+if [ $varinfor == Y ] || [ $varinfor == y ] 
+then
+ echo Your account is being created
+elif [ $varinfor == N ] || [ $varinfor == n ]
+then
+ echo return 1 
+fi
+
 
 
 
