@@ -13,14 +13,9 @@ echo Please wait system processing...
 echo This is your password - $x $varpass 
 echo The information you entered is: Username $varuser, Name $varname, Password $varpass. Is this correct?[Y/N]
 read -a  varinfor
-if [ $varinfor == Y ] || [ $varinfor == y ] 
-then
- echo Your account is being created
-elif [ $varinfor == N ] || [ $varinfor == n ]
-then
- echo return 1 
-fi
-
-
-
+for user in $varuser
+do
+ sudo useradd $varname
+ sudo passwd $varpass $varname  
+done
 
