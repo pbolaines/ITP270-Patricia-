@@ -12,7 +12,7 @@ read -s $varpass
 echo Please wait system processing...
 echo This is your password - $x $varpass 
 echo The information you entered is: Username $varuser, Name $varname, Password $varpass. Is this correct?[Y/N]
-read -a  varinfor
+read  varinfor
 for user in $varuser
 do
  sudo useradd $varname
