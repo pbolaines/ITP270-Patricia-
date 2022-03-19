@@ -10,7 +10,7 @@ done
 #Gets two passwords
 echo "Enter the password: "
 read pass
-for i in range{2}; do
+for i in pass{2}; do
 echo $pass
 done 
 #Verifies the password lenght
