@@ -4,8 +4,7 @@ echo "Welcome to the user management!"
 #Gets two usernames
 echo "Enter the username: "
 read username
-for i in username{2} 
-do
+for i in username{2}; do
 echo $username
 done 
 #Gets two passwords
